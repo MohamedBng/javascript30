@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Without Articles</title>
+</head>
+<body>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #bands {
+      list-style: inside square;
+      font-size: 20px;
+      background: white;
+      width: 500px;
+      margin: auto;
+      padding: 0;
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    #bands li {
+      border-bottom: 1px solid #efefef;
+      padding: 20px;
+    }
+    
+    #bands li:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      color: #ffc600;
+      text-decoration: none;
+    }
+
+  </style>
+
+  <ul id="bands"></ul>
+
+<script>
+const bands = ['Plot in You', 'Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'Bled', 'Say Anything', 'Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'Skylit Drive', 'Anywhere But Here', 'Old Dog'];
+const bandsort= bands.sort();
+bandsort[1]='The Bled';
+bandsort[3]='The Devil Wears Prada';
+bandsort[4]='The Midway State';
+bandsort[7]='An Old Dog';
+bandsort[9]='The Plot in You';
+bandsort[11]='A Skylit Drive';
+const liste = document.getElementById('bands')
+for (var i =0 ; i < bands.length ; i++) {
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(bandsort[i]));
+  liste.appendChild(li);
+
+}
+
+</script>
+
+</body>
+</html>

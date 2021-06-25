@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+ var mdpUtilisateur = [];
+var mdp = 'azerty';
+
+window.addEventListener('keyup', (e) => {
+  mdpUtilisateur.push(e.key);
+  mdpUtilisateur.splice(mdp.length - 1, mdpUtilisateur.length - mdp.length);
+  if (mdpUtilisateur.join('').includes(mdp)) 
+  {
+    cornify_add();
+  }
+   }
+);
+</script>
+</body>
+</html>
